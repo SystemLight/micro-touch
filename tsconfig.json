@@ -7,11 +7,11 @@
     "**/*.spec.ts"
   ],
   "compilerOptions": {
-    "target": "es6",
+    "target": "esNext",
     "moduleResolution": "node",
     "strict": true,
     "jsx": "preserve",
-    "module": "CommonJS",
+    "module": "esNext",
     "resolveJsonModule": false,
     "allowJs": false,
     "allowSyntheticDefaultImports": true,

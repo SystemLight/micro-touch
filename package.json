@@ -1,6 +1,6 @@
 {
   "name": "micro-touch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Super basic mobile gesture support tool",
   "main": "./dist/index.umd.js",
   "types": "./dist/index.d.ts",
@@ -13,9 +13,9 @@
   "author": "SystemLight",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SystemLight/f-fuse/issues"
+    "url": "https://github.com/SystemLight/micro-touch/issues"
   },
-  "homepage": "https://github.com/SystemLight/f-fuse#readme",
+  "homepage": "https://github.com/SystemLight/micro-touch#readme",
   "keywords": [
     "micro-touch",
     "touch",
