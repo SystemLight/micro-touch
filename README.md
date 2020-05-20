@@ -26,7 +26,7 @@ let t2d = new Transform2D(tou.el)
 //     console.log(moveDistance, startDistance);
 // });
 tou.on("pinch", function (e) {
-    let {rotate} = e;
+    let {pointAngle,startAngle,pointSpace,startSpace,scale,rotate} = e;
     t2d.setRotate(rotate);
 })
 ```
