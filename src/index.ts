@@ -48,12 +48,12 @@ export class TouchGesture {
     }
 
     private _initEve() {
-        this.el.addEventListener("touchstart", this._touchstart.bind(this));
-        document.addEventListener("touchmove", this._touchmove.bind(this));
-        document.addEventListener("touchend", this._touchend.bind(this));
+        this.el.addEventListener("touchstart", this._touchstart);
+        document.addEventListener("touchmove", this._touchmove);
+        document.addEventListener("touchend", this._touchend);
     }
 
-    private _touchstart(e: TouchEvent) {
+    private _touchstart = (e: TouchEvent) => {
         if (e.targetTouches.length === 1) {
             // 按下且只有一根手指
             this.touchLength = 1;
@@ -71,7 +71,7 @@ export class TouchGesture {
         }
     }
 
-    private _touchmove(e: TouchEvent) {
+    private _touchmove = (e: TouchEvent) => {
         clearTimeout(this.longTimer);
         let nowPoint: point = {x: e.touches[0].clientX, y: e.touches[0].clientY};
         if (this.touchLength === 1) {
@@ -100,7 +100,7 @@ export class TouchGesture {
         }
     }
 
-    private _touchend(e: TouchEvent) {
+    private _touchend = (e: TouchEvent) => {
         clearTimeout(this.longTimer);
 
         let tapEndPoint: point = {x: e.changedTouches[0].clientX, y: e.changedTouches[0].clientY};
@@ -172,9 +172,9 @@ export class TouchGesture {
     }
 
     destroy() {
-        this.el.removeEventListener("touchstart", this._touchstart.bind(this));
-        document.removeEventListener("touchmove", this._touchmove.bind(this));
-        document.removeEventListener("touchend", this._touchend.bind(this));
+        this.el.removeEventListener("touchstart", this._touchstart);
+        document.removeEventListener("touchmove", this._touchmove);
+        document.removeEventListener("touchend", this._touchend);
     }
 
     public interval(lastTime: number, duration: number = 500) {

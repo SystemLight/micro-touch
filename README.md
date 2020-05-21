@@ -2,7 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/micro-touch.svg)](https://www.npmjs.com/package/micro-touch)
 
-Super basic mobile gesture support tool. 
+Super basic mobile gesture support tool.   
 NPM page: https://www.npmjs.com/package/micro-touch
 
 # Installation
