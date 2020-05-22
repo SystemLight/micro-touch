@@ -1,4 +1,4 @@
-declare type eve = "tap" | "doubleTap" | "longTap" | "pressMove" | "pinch";
+declare type eve = "tap" | "doubleTap" | "longTap" | "pressMove" | "pinch" | "tapDown" | "tapMove" | "tapUp";
 declare type eveCallback = (e: ExtendTouchEvent) => void;
 declare type point = {
     x: number;
@@ -16,6 +16,7 @@ export declare class TouchGesture {
     private touchLength;
     private startPoint;
     private startPoint2;
+    private startMiddlePoint;
     private lastMovePoint;
     private lastTapEndPoint;
     private startSpace;
@@ -28,6 +29,9 @@ export declare class TouchGesture {
     private _touchstart;
     private _touchmove;
     private _touchend;
+    private _tapDown;
+    private _tapMove;
+    private _tapUp;
     private _tap;
     private _doubleTap;
     private _longTap;
@@ -39,6 +43,10 @@ export declare class TouchGesture {
     interval(lastTime: number, duration?: number): Promise<unknown>;
     getMove(p1: point, p2: point): move;
     getAngle(move: move): number;
+    getMiddlePoint(p1: point, p2: point): {
+        x: number;
+        y: number;
+    };
     radian2angle(radian: number): number;
     angle2radian(angle: number): number;
 }
