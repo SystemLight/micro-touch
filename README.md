@@ -31,6 +31,39 @@ tou.on("pinch", function (e) {
 })
 ```
 
+```
+```
+结合mmicro-transform2d实现拖拽阻力
+
+let pullN = 0.2;
+
+let tg = new TouchGesture(divDom.current);
+let t2d = new Transform2D(divDom.current);
+t2d.setTranslate(50, 0);
+
+tg.on("tapDown", function () {
+    divDom.current.style.removeProperty("transition");
+    t2d.setTranslate(50, 0);
+});
+
+tg.on("pressMove", function (e) {
+    let {moveDistance: {x, y, d}} = e;
+    let [nowX, nowY] = t2d.getTranslate();
+
+    if (nowY > 50) {
+        y *= pullN;
+    }
+
+    t2d.setTranslate(50, nowY + y);
+});
+
+tg.on("tapUp", function () {
+    divDom.current.style.transition = "500ms";
+    t2d.setTranslate(50, 0);
+});
+```
+```
+
 # Note
 
 传入一个DOM对象，对其进行方法监听
