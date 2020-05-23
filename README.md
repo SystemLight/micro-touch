@@ -32,7 +32,6 @@ tou.on("pinch", function (e) {
 ```
 
 ```
-```
 结合mmicro-transform2d实现拖拽阻力
 
 let pullN = 0.2;
@@ -61,7 +60,6 @@ tg.on("tapUp", function () {
     divDom.current.style.transition = "500ms";
     t2d.setTranslate(50, 0);
 });
-```
 ```
 
 # Note
