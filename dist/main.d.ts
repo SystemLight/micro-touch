@@ -1,4 +1,4 @@
-declare type eve = "tap" | "doubleTap" | "longTap" | "pressMove" | "pinch" | "tapDown" | "tapMove" | "tapUp";
+declare type eve = 'tap' | 'doubleTap' | 'longTap' | 'pressMove' | 'pinch' | 'tapDown' | 'tapMove' | 'tapUp';
 declare type eveCallback = (e: ExtendTouchEvent) => void;
 declare type point = {
     x: number;
@@ -10,7 +10,7 @@ declare type move = point & {
 interface ExtendTouchEvent extends TouchEvent {
     [key: string]: any;
 }
-export declare class TouchGesture {
+export default class TouchGesture {
     el: HTMLElement;
     private eventPool;
     private touchLength;

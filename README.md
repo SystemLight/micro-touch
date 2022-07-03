@@ -67,14 +67,14 @@ tg.on("tapUp", function () {
 传入一个DOM对象，对其进行方法监听
 
 - new TouchGesture(DOM)
-    
+
 - on(gesture,callback) : 注册事件监听回调函数
-    - 'tap' : 元素被单击
-    - 'doubleTap' : 元素被双击
-    - 'longTap' : 长按元素一秒
-    - 'pressMove' : 移动元素
-    - 'pinch' : 双指缩放或者旋转时触发
-    - "tapDown" | "tapMove" | "tapUp" : 等同于touchstart，touchmove，touchend，但是拓展了事件属性
+  - 'tap' : 元素被单击
+  - 'doubleTap' : 元素被双击
+  - 'longTap' : 长按元素一秒
+  - 'pressMove' : 移动元素
+  - 'pinch' : 双指缩放或者旋转时触发
+  - "tapDown" | "tapMove" | "tapUp" : 等同于touchstart，touchmove，touchend，但是拓展了事件属性
 
 - off() : 取消注册的回调函数
 - destroy() : 销毁注册实例
